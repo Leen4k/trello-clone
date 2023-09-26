@@ -2,24 +2,31 @@
 import axios from 'axios';
 import React from 'react'
 import { BiTrash } from 'react-icons/bi';
+// import { toast } from 'react-toastify';
 
-interface DeleteTodoProps {
-    id: string;
+export interface getTodoProps {
+    id?: string;
+    title?: string;
+    desc?: string;
+    data?: any[];
+    mutate?: any;
 }
 
-const DeleteTodo = ({id}:DeleteTodoProps) => {
+const DeleteTodo = ({id,title,desc,data,mutate}:getTodoProps) => {
+
+    // const notify = () => toast("Delete Successfull");
 
     const handleDelete = async (id:string) => {
         try{
             const res = await axios.delete(`api/todos/${id}`)
-            window.location.reload();
+            mutate();
         }catch(err){
             console.log(err)
         }
     }
 
   return (
-    <button onClick={(e:React.MouseEvent<HTMLButtonElement>)=>{e.preventDefault();handleDelete(id)}}><BiTrash /></button>
+    <button className="hover:scale-125 transition-all" onClick={(e:React.MouseEvent<HTMLButtonElement>)=>{e.preventDefault();handleDelete(id)}}><BiTrash /></button>
   )
 }
 
