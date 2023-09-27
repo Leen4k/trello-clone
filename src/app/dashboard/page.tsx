@@ -46,7 +46,7 @@ const page = () => {
   });
   
   return (
-    <section className="h-screen overflow-y-hidden min-w-fit pt-32 px-4 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
+    <section className="h-auto md:h-screen overflow-y-hidden min-w-fit pt-32 px-4 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
       <div className="flex flex-col md:flex-row gap-4 text-sm">
         {data?.map((item:any)=>(
           <div key={item.id} className="flex flex-col gap-2 bg-[#101204] text-[#B5C2CF] px-2 py-4 rounded-lg w-[300px] shrink-0 hover:shadow-xl">
