@@ -17,7 +17,7 @@ const UpdateTodo = ({id,title,desc,mutate}:getTodoProps) => {
 
     const notify = () => toast("Update Successfull");
 
-    const getSingleTodo = (id:string) => {
+    const getSingleTodo = (id:any) => {
         const searchParams = new URLSearchParams(window.location.search);
         searchParams.set("todo_id", id);
         const newPathName = `${window.location.pathname}?${searchParams.toString()}`
