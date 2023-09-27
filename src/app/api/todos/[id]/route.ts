@@ -1,6 +1,4 @@
-import { db } from "@/firebase";
 import admin from "@/utils/firebase-admin-config.ts";
-import { collection, getDocs, onSnapshot } from "firebase/firestore";
 import { NextResponse } from "next/server";
 
 export const DELETE = async (req:any, {params}:any) => {

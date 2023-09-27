@@ -1,4 +1,3 @@
-import { db } from "@/firebase";
 import admin from "@/utils/firebase-admin-config.ts";
 import { Firestore } from "firebase-admin/firestore";
 import { collection, getDocs, onSnapshot } from "firebase/firestore";
