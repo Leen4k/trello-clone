@@ -26,7 +26,7 @@ yarn-error.log*
 
 # local env files
 .env*.local
-/src/utils
+/src/utils/key.json
 /src/firebase.ts
 .env
 

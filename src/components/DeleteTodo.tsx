@@ -2,6 +2,7 @@
 import axios from 'axios';
 import React from 'react'
 import { BiTrash } from 'react-icons/bi';
+import { toast } from 'react-toastify';
 // import { toast } from 'react-toastify';
 
 export interface getTodoProps {
@@ -14,12 +15,13 @@ export interface getTodoProps {
 
 const DeleteTodo = ({id,title,desc,data,mutate}:getTodoProps) => {
 
-    // const notify = () => toast("Delete Successfull");
+    const notify = () => toast("Todo has been deleted");
 
     const handleDelete = async (id:string) => {
         try{
             const res = await axios.delete(`api/todos/${id}`)
             mutate();
+            notify();
         }catch(err){
             console.log(err)
         }
