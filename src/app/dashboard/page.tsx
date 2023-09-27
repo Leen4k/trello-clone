@@ -30,7 +30,7 @@ const page = () => {
   const searchParams = useSearchParams()
   const router = useRouter();
   const fetcher = (...args:[any]) => fetch(...args).then((response) => response.json());
-  const {data, mutate, error, isLoading} = useSWR(`https://trello-clone-gold-gamma.vercel.app/api/todos?username=${session?.data?.user?.email}`,fetcher)
+  const {data, mutate, error, isLoading} = useSWR(`api/todos?username=${session?.data?.user?.email}`,fetcher)
 
 
   if(session.status === "unauthenticated") {
