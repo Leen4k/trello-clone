@@ -13,7 +13,6 @@ export const GET = async (req:any) => {
         const db = admin.firestore()
         const adminRef = db.collection("todos");
         const response = await adminRef.where("username","==",email).get();
-        // .orderBy("timestamp", "asc")
         // 
         const responseArr:any[] = [];
         response.forEach(doc => {

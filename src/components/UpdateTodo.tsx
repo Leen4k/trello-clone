@@ -35,7 +35,7 @@ const UpdateTodo = ({id,title,desc,mutate}:getTodoProps) => {
     const handleSubmit = async () => {
         const id = searchParams.get('todo_id');
         try{
-            await axios.put(`/api/todos/${id}`, {newTitle,newDesc})
+            await axios.put(`api/todos/${id}`, {newTitle,newDesc})
             const url = new URLSearchParams(window.location.search);
             url.delete("todo_id");
             const newPathName = `${window.location.pathname}?${url.toString()}`

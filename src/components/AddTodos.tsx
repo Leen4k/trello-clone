@@ -20,7 +20,7 @@ const AddTodos = ({mutate}:getTodoProps) => {
         const createdAt = currentDate.toISOString();
 
         e.preventDefault();
-        axios.post("/api/todos",{title,desc,createdAt,username:session?.data?.user?.email}).then((res)=>{
+        axios.post("api/todos",{title,desc,createdAt,username:session?.data?.user?.email}).then((res)=>{
             mutate();
             notify();
         }).catch((err) => {console.log(err)})
