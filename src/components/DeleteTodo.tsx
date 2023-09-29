@@ -11,6 +11,7 @@ export interface getTodoProps {
     desc?: string;
     data?: any[];
     mutate?: any;
+    isLoading?: boolean;
 }
 
 const DeleteTodo = ({id,title,desc,data,mutate}:getTodoProps) => {

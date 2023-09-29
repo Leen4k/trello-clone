@@ -6,8 +6,9 @@ import {GrAdd} from "react-icons/gr"
 import { getTodoProps } from './DeleteTodo';
 import { useSession } from 'next-auth/react';
 import { toast } from 'react-toastify';
+import Skeleton from 'react-loading-skeleton';
 
-const AddTodos = ({mutate}:getTodoProps) => {
+const AddTodos = ({mutate,isLoading}:getTodoProps) => {
     const session = useSession();
     const [title, setTitle] = useState("");
     const [desc, setDesc] = useState("");
