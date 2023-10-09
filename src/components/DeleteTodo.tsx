@@ -30,7 +30,8 @@ const DeleteTodo = ({id,title,desc,data,mutate}:getTodoProps) => {
         setIsOpen(true);
     }
 
-    const handleDelete = async () => {
+    const handleDelete = async (e:React.MouseEvent) => {
+        e.preventDefault();
         const id = searchParams.get('todo_id');
         try{
             const res = await axios.delete(`api/todos/${id}`)
