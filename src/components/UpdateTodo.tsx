@@ -13,7 +13,7 @@ const UpdateTodo = ({id,title,desc,mutate}:getTodoProps) => {
     const [newTitle, setNewTitle] = useState<string>(title);
     const [newDesc, setNewDesc] = useState<string>(desc);
     const router = useRouter();
-    const searchParams = useSearchParams()
+    const searchParams = useSearchParams();
 
     const notify = () => toast("Update Successfull");
 
@@ -24,6 +24,7 @@ const UpdateTodo = ({id,title,desc,mutate}:getTodoProps) => {
         router.push(newPathName,{scroll: false});
         setIsOpen(true);
     }
+
     const closeModal = () => {
         const searchParams = new URLSearchParams(window.location.search);
         setIsOpen(false);

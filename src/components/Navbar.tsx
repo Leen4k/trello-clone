@@ -18,7 +18,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-screen flex justify-between bg-[#1D2125] text-[#9FADBC] py-2 px-4 fixed">
+    <div className="w-screen z-[1000] flex justify-between bg-[#1D2125] text-[#9FADBC] py-2 px-4 fixed">
       <div onClick={()=>{router.push("/")}} className="font-extrabold flex gap-2 items-center text-lg border-sky-100 cursor-pointer"><BsTrello /><span className="hidden md:block">Trello</span></div>
       <div className="flex gap-4">
         {/* <form action="" className="flex items-center py-2 px-4 gap-2 bg-[#22272B] border-slate-500 border-[.001rem] rounded-md">
